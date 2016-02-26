@@ -95,4 +95,4 @@ Original variable names were used, and they can be seeing on features.txt
 
 **From the tidy data set, creates a second, independent tidy data set with the average of each variable for each activity and each subject.**
 
-This function calls tidyDataSet and returns the mean for each variable grouped by activity and subject. Using *dyplr* group_by and summarise_each function to return the result of the mean function for each variable, except for the grouped variables (activity and subject).
+This function calls tidyDataSet and returns the mean for each variable grouped by activity and subject. Using *dplyr* group_by and summarise_each function to return the result of the mean function for each variable, except for the grouped variables (activity and subject).
