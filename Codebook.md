@@ -80,10 +80,11 @@ Using the **grep** function, the indexes were returned to extract the desired va
 
 **Uses descriptive activity names to name the activities in the data set**
 
-
+Using names on activity_labels.txt, activity ids were replaced by activity labels using **mutate** dplyr function
 
 **Appropriately labels the data set with descriptive variable names.**
 
+Original variable names were used, and they can be seeing on features.txt
 
 ### function averages
 
