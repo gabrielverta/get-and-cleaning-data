@@ -55,10 +55,18 @@ extractMeanAndStandardDeviation <- function(data){
     final_data
 }
 
+# Uses descriptive activity names to name the activities in the data set
+nameActivities <- function(data){
+    activity_names <- readLines("activity_labels.txt")
+    names <- gsub("^\\d ", "", activity_names)
+    mutate(data, activity = sapply(activity, function(index){ names[index] }))
+}
+
 # Appropriately labels the data set with descriptive variable names
 tidyDataSet <- function(){
     data <- mergeDatasets()
     data <- extractMeanAndStandardDeviation(data)
+    data <- nameActivities(data)
     write.table(data, file = "tidy.txt", row.names = FALSE);
     data
 }
